@@ -1,22 +1,24 @@
-import SLIDE1 from "@/assets/slide1.svg";
-import SLIDE2 from "@/assets/slide2.svg";
-import SLIDE3 from "@/assets/slide3.svg";
 import { ISlide } from "./types";
 
 export const sliderData: ISlide[] = [
   {
     id: 1,
-    img: SLIDE1,
+    // img: "bg-slide1",
+    img: "/img/slide1.svg",
     title: "Your Neighbor",
   },
   {
     id: 2,
-    img: SLIDE2,
+    // img: "bg-slide2",
+    img: "/img/slide2.svg",
+
     title: "Step-Sister",
   },
   {
     id: 3,
-    img: SLIDE3,
+    // img: "bg-slide3",
+    img: "/img/slide3.svg",
+
     title: "Famous Celebrity",
   },
 ];

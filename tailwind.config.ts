@@ -18,6 +18,9 @@ const config: Config = {
       backgroundImage: {
         main: "url('/img/bg1.jpg')",
       },
+      backgroundSize: {
+        "120%": "120%",
+      },
       boxShadow: {
         "inner-shadow": "inset 4px 4px 6px 2px rgba(0,0,0, 0.3)",
         "full-inner-shadow": "inset 0px 0px 10px 5px rgba(0,0,0, 0.3)",
