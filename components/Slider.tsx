@@ -29,22 +29,23 @@ const Slider = () => {
         />
       </button>
       <div className="lg:h-[525px] lg:w-[463px] w-[225px] h-[278px] flex flex-col justify-center items-center 3xl:py-10 3xl:px-16 py-4 px-5 bg-white bg-opacity-20 border border-white border-opacity-40 rounded-[20px]">
-        {sliderData.map((el, i) => (
-          <div
-            key={el.id}
-            className={`${
-              i === activeIndex ? "block" : "hidden"
-            } flex justify-center flex-col items-center lg:gap-8 gap-3`}
-          >
+        {sliderData &&
+          sliderData.map((el, i) => (
             <div
-              style={{ backgroundImage: `url(${el.img})` }}
-              className="animate-appear h-[199px] w-[171px] lg:w-[321px] lg:h-[374px] bg-120% bg-center overflow-hidden rounded-[20px]"
-            ></div>
-            <p className="text-nowrap text-white text-center uppercase text-xl lg:text-3xl font-semibold">
-              {el.title}
-            </p>
-          </div>
-        ))}
+              key={el.id}
+              className={`${
+                i === activeIndex ? "block" : "hidden"
+              } flex justify-center flex-col items-center lg:gap-8 gap-3`}
+            >
+              <div
+                style={{ backgroundImage: `url(${el.img})` }}
+                className="animate-appear h-[199px] w-[171px] lg:w-[321px] lg:h-[374px] bg-120% bg-center overflow-hidden rounded-[20px]"
+              ></div>
+              <p className="text-nowrap text-white text-center uppercase text-xl lg:text-3xl font-semibold">
+                {el.title}
+              </p>
+            </div>
+          ))}
       </div>
       <button
         onClick={() => slide("next")}
