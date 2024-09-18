@@ -65,10 +65,10 @@ body {
     @apply text-white p-6 uppercase rounded-xl font-semibold md:text-3xl text-2xl md:hover:text-2xl hover:text-xl w-full sm:w-80 h-14 md:h-20 flex justify-center items-center;
   }
   .btn-accent {
-    @apply accent-btn-bg hover:shadow-inner-shadow shadow-white;
+    @apply accent-btn-bg hover:shadow-inner-shadow focus:shadow-inner-shadow shadow-white;
   }
   .btn-default {
-    @apply border border-white hover:bg-white hover:bg-opacity-20 hover:shadow-white-right;
+    @apply border border-white hover:bg-white hover:bg-opacity-20 hover:shadow-white-right focus:bg-opacity-20 focus:shadow-white-right;
   }
   .headers {
     @apply text-bg font-bold sm:text-7xl text-2xl uppercase text-center;

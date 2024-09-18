@@ -1,6 +1,13 @@
+"use client";
 import React from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useQueryString } from "@/static/hooks";
 
 const Step1 = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const { createQueryString } = useQueryString();
+
   return (
     <section className="py-5 px-4 w-full h-full min-h-screen flex flex-col justify-between gap-10 sm:justify-center items-center">
       <div className="max-w-[1000px] mx-auto flex sm:gap-10 gap-3 flex-col justify-center items-center">
@@ -19,8 +26,22 @@ const Step1 = () => {
       </div>
 
       <div className="flex justify-center gap-3 md:gap-12 flex-col-reverse sm:flex-row w-full">
-        <button className="btn btn-default">No, thanks</button>
-        <button className="btn btn-accent">Continue</button>
+        <button
+          onClick={() =>
+            router.push(pathname + "?" + createQueryString("step", "1"))
+          }
+          className="btn btn-default"
+        >
+          No, thanks
+        </button>
+        <button
+          onClick={() =>
+            router.push(pathname + "?" + createQueryString("step", "2"))
+          }
+          className="btn btn-accent"
+        >
+          Continue
+        </button>
       </div>
     </section>
   );
